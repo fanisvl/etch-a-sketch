@@ -1,19 +1,28 @@
 body {
     background-color: black;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 3vh;
 }
 
 #grid-container {
     display: grid;
     grid-template-columns: repeat(16, 20px); /* Must be same as .box width */
-    justify-content: center;
-    margin-top: 25vh;
-    margin-bottom: 25vh;
+    border: 1px solid white;
+    margin-top: 20vh;
+    max-width: 320px;
 }
 
 .box {
     width: 20px; /* Must be same as grid template repeat value */
     height: 20px;
     border: 1px solid grey;
+}
+
+#resetBtn {
+    width: 130px;
+    height: 30px;
 }
 
 .addColor {

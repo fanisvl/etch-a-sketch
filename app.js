@@ -19,14 +19,18 @@ function grid(rowNum) {
 }
 
 resetBtn.addEventListener('click', () => {
-    reset();
+    reset(prompt("New size", "10px"));
 });
 
-function reset() {
+function reset(size) {
     let boxes = document.querySelectorAll('.box');
-    for(let i of boxes) {
-        i.classList.remove('addColor');
+    for(let i = 0; i < boxes.length; i++) {
+        boxes[i].classList.remove('addColor');
+        boxes[i].style.width = size;
+        boxes[i].style.height = size;
     }
+    gridContainer.style.gridTemplateColumns = "repeat (16," + size + ")";
+
 }
 
 grid();
