@@ -1,8 +1,8 @@
 let gridContainer = document.querySelector('#grid-container')
 let resetBtn = document.querySelector('#resetBtn');
 
-function row() {
-    for (i = 1; i <= 16; i++) {
+function row(squaresPerSide) {
+    for (i = 1; i <= squaresPerSide; i++) {
         let box = document.createElement('div');
         box.classList.add('box');
         gridContainer.appendChild(box);
@@ -12,9 +12,9 @@ function row() {
     }
 }
 
-function grid(rowNum) {
-    for (rowNum = 1; rowNum <= 16; rowNum++) {
-        row(rowNum);
+function grid(squaresPerSide) {
+    for (rowNum = 1; rowNum <= squaresPerSide; rowNum++) {
+        row(squaresPerSide);
     }
 }
 
@@ -31,6 +31,7 @@ function reset(squaresPerSide) {
         boxes[i].style.height = newDimensions;
     }
     gridContainer.style.cssText = 'grid-template-columns: repeat(' + squaresPerSide + ',' + newDimensions + ")";
+    gridContainer.style.cssText = 'grid-template-rows: repeat(' + squaresPerSide + ',' + newDimensions + ")";
     console.log(squaresPerSide + " squaresPerSide");
     console.log(newDimensions + " newDimensions");
 }
@@ -40,4 +41,4 @@ function calcDimensions(squaresPerSide) {
     return (boxWidth + "px");
 }
 
-grid();
+grid(16);
