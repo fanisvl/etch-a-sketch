@@ -3,12 +3,18 @@ let box = document.createElement('div')
 box.classList.add('box');
 gridContainer.appendChild(box);
 
-function row() {
-    for (let i = 0; i <= 16; i++) {
-        let i = document.createElement('div');
-        i.classList.add('box');
-        gridContainer.appendChild(i);
+function row(rowNumber) {
+    for (let box = 0; box <= 16; box++) {
+        let box = document.createElement('div');
+        box.classList.add('box');
+        gridContainer.appendChild(box);
     }
 }
 
-row();
+function grid() {
+    for (let rowNum = 0; rowNum <= 16; rowNum++) {
+        row(rowNum);
+    }
+}
+
+grid();
