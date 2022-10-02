@@ -5,6 +5,8 @@ body {
 #grid-container {
     display: grid;
     grid-template-columns: repeat(16, 20px); /* Must be same as .box width */
+    justify-content: center;
+    margin-top: 25vh;
 }
 
 .box {
