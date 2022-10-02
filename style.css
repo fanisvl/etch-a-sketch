@@ -1,11 +1,14 @@
+body {
+    background-color: black;
+}
+
 #grid-container {
-    display: flex;
-    margin-top: 50vh;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(16, 20px); /* Must be same as .box width */
 }
 
 .box {
-    width: 20px;
+    width: 20px; /* Must be same as grid template repeat value */
     height: 20px;
-    border: 1px solid black;
+    border: 1px solid grey;
 }
