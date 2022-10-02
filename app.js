@@ -1,7 +1,7 @@
 let gridContainer = document.querySelector('#grid-container')
 
-function row(rowNumber) {
-    for (let box = 1; box <= 16; box++) { // set box = 0 
+function row() {
+    for (let box = 1; box <= 16; box++) {
         let box = document.createElement('div');
         box.classList.add('box');
         gridContainer.appendChild(box);
@@ -9,7 +9,7 @@ function row(rowNumber) {
 }
 
 function grid() {
-    for (let rowNum = 1; rowNum <= 16; rowNum++) { // set rowNum = 2
+    for (let rowNum = 1; rowNum <= 16; rowNum++) {
         row(rowNum);
     }
 }
