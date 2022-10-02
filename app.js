@@ -19,25 +19,25 @@ function grid(rowNum) {
 }
 
 resetBtn.addEventListener('click', () => {
-    reset(prompt("How many squares per side?", "10"));
+    reset(prompt("How many squares per side?", "16"));
 });
 
-function reset(squares) {
+function reset(squaresPerSide) {
     let boxes = document.querySelectorAll('.box');
-    let newDimensions = calc(squares);
+    let newDimensions = calcDimensions(squaresPerSide);
     for(let i = 0; i < boxes.length; i++) {
         boxes[i].classList.remove('addColor');
         boxes[i].style.width = newDimensions;
         boxes[i].style.height = newDimensions;
     }
-    gridContainer.style.cssText = 'grid-template-columns: repeat(' + squares + ',' + newDimensions + "px)";
-    console.log(squares);
-    console.log(newDimensions);
+    gridContainer.style.cssText = 'grid-template-columns: repeat(' + squaresPerSide + ',' + newDimensions + ")";
+    console.log(squaresPerSide + " squaresPerSide");
+    console.log(newDimensions + " newDimensions");
 }
 
-function calc(squares) {
-    let boxWidth = 320 / squares;
-    return boxWidth;
+function calcDimensions(squaresPerSide) {
+    let boxWidth = 320 / squaresPerSide;
+    return (boxWidth + "px");
 }
 
 grid();
