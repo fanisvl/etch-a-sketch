@@ -1,9 +1,13 @@
 body {
     background-color: black;
+}
+
+#wrapper {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    gap: 3vh; 
     align-items: center;
-    gap: 3vh;
+    border: 1px solid red;
 }
 
 #grid-container {
@@ -11,7 +15,7 @@ body {
     grid-template-columns: repeat(16, 20px); /* Must be same as .box width */
     border: 1px solid white;
     margin-top: 20vh;
-    max-width: 320px;
+    width: 320px;
 }
 
 .box {
