@@ -5,6 +5,9 @@ function row() {
         let box = document.createElement('div');
         box.classList.add('box');
         gridContainer.appendChild(box);
+        box.addEventListener('mouseover', () => {
+            box.classList.add('boxHover');
+        })
     }
 }
 
