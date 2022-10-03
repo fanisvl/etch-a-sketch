@@ -2,22 +2,25 @@ body {
     background-color: black;
 }
 
+h1 {
+    color: white;
+
+}
 #wrapper {
     display: flex;
     flex-direction: column;
     gap: 3vh; 
     align-items: center;
+    margin-top: 10vh;
 }
 
 #grid-container {
     display: grid;
     border: 1px solid white;
-    margin-top: 20vh;
-    width: 320px;
 }
 
 .box {
-    border: 1px solid rgba(128, 128, 128, 0.274);
+    border: 0px solid rgba(128, 128, 128, 0.347);
 }
 
 #resetBtn {
