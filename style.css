@@ -54,6 +54,14 @@ h1 {
 
 }
 
+a {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    text-decoration: none;
+    color: white;
+}
+
 #logo {
     height: 25px;
     background-color: white;
