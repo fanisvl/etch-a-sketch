@@ -28,6 +28,11 @@ h1 {
     height: 30px;
 }
 
+#clearBtn {
+    width: 130px;
+    height: 30px;
+}
+
 .addColor {
     background-color: azure;
 }

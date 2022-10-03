@@ -1,5 +1,6 @@
 let gridContainer = document.querySelector('#grid-container');
 let resetBtn = document.querySelector('#resetBtn');
+let clearBtn = document.querySelector('#clearBtn');
 
 function column(squaresPerSide) {
     for (i = 1; i <= squaresPerSide; i++) {
@@ -15,7 +16,7 @@ function column(squaresPerSide) {
 }
 
 function calcDimensions(squaresPerSide) {
-    let dimensions = 500 / squaresPerSide; // 320 is the grid's fixed size in px
+    let dimensions = 500 / squaresPerSide; // 500 can be changed to modify gridContainer's size.
     let newDimensions = dimensions + "px";
     return newDimensions;
 }
@@ -52,4 +53,13 @@ function reset(squaresPerSide) {
     }
 }
 
-columnRepeat(16);
+clearBtn.addEventListener('click', clear);
+
+function clear() {
+    let boxes = document.querySelectorAll('.box');
+        for (let i = 0; i < boxes.length; i++) {
+            boxes[i].classList.remove('addColor');
+        }
+}
+
+columnRepeat(64);
