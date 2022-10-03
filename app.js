@@ -41,4 +41,4 @@ function calcDimensions(squaresPerSide) {
     return (boxWidth + "px");
 }
 
-grid(16);
+grid(18);
