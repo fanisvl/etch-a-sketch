@@ -20,7 +20,7 @@ h1 {
 }
 
 .box {
-    border: 0px solid rgba(128, 128, 128, 0.347);
+    border: 0px solid grey;
 }
 
 #resetBtn {

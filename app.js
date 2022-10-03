@@ -15,7 +15,7 @@ function column(squaresPerSide) {
 }
 
 function calcDimensions(squaresPerSide) {
-    let dimensions = 320 / squaresPerSide; // 320 is the grid's fixed size in px
+    let dimensions = 500 / squaresPerSide; // 320 is the grid's fixed size in px
     let newDimensions = dimensions + "px";
     return newDimensions;
 }
@@ -33,8 +33,8 @@ resetBtn.addEventListener('click', () => {
 })
 
 function reset(squaresPerSide) {
-    if (squaresPerSide > 50) {
-        alert('Error, maximum value is 50');
+    if (squaresPerSide > 100) {
+        alert('Error, maximum value is 100');
     }
     else if (squaresPerSide <= 0) {
         alert('Error, please enter a positive value!');
