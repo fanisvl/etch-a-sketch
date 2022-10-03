@@ -2,6 +2,10 @@ let gridContainer = document.querySelector('#grid-container');
 let resetBtn = document.querySelector('#resetBtn');
 let clearBtn = document.querySelector('#clearBtn');
 
+let mouseDown = false
+document.body.onmousedown = () => (mouseDown = true)
+document.body.onmouseup = () => (mouseDown = false)
+
 function column(squaresPerSide) {
     for (i = 1; i <= squaresPerSide; i++) {
         let box = document.createElement('div');
@@ -10,7 +14,9 @@ function column(squaresPerSide) {
         box.style.height = "" + calcDimensions(squaresPerSide) + "";
         gridContainer.appendChild(box);
         box.addEventListener('mouseover', () => {
-            box.classList.add('addColor');
+            if (mouseDown == true) {
+                box.classList.add('addColor');
+            }  
         })
     }
 }

@@ -21,6 +21,7 @@ h1 {
 
 .box {
     border: 0px solid grey;
+    user-select: none;
 }
 
 #resetBtn {
