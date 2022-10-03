@@ -20,4 +20,12 @@ function calcDimensions(squaresPerSide) {
     return newDimensions;
 }
 
-column(16);
+function columnRepeat(squaresPerSide) {
+    gridContainer.style.cssText = 'grid-template-columns: repeat(' + squaresPerSide + "," + calcDimensions(squaresPerSide) + ")";
+    for (let i = 1; i <= squaresPerSide; i++) {
+        column(squaresPerSide);
+
+    }
+}
+
+columnRepeat(16);
