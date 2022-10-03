@@ -36,7 +36,7 @@ function columnRepeat(squaresPerSide) {
 }
 
 resetBtn.addEventListener('click', () => {
-    reset(prompt("How many squares per side?", "16"));
+    reset(prompt("How many squares per side?", "64"));
 })
 
 function reset(squaresPerSide) {
