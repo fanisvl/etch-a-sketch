@@ -1,7 +1,7 @@
 let gridContainer = document.querySelector('#grid-container');
 let resetBtn = document.querySelector('#resetBtn');
 
-function row(squaresPerSide) {
+function column(squaresPerSide) {
     for (i = 1; i <= squaresPerSide; i++) {
         let box = document.createElement('div');
         box.classList.add('box');
@@ -20,4 +20,4 @@ function calcDimensions(squaresPerSide) {
     return newDimensions;
 }
 
-row(16);
+column(16);
