@@ -11,16 +11,13 @@ body {
 
 #grid-container {
     display: grid;
-    /* grid-template-columns: repeat(16, 20px); Transfer to function */
     border: 1px solid white;
     margin-top: 20vh;
     width: 320px;
 }
 
 .box {
-    /* width: 20px; Must be same as grid template repeat value
-    height: 20px;   Transfer to function */
-    border: 1px solid grey;
+    border: 1px solid rgba(128, 128, 128, 0.274);
 }
 
 #resetBtn {

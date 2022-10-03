@@ -33,12 +33,23 @@ resetBtn.addEventListener('click', () => {
 })
 
 function reset(squaresPerSide) {
-    let boxes = document.querySelectorAll('.box');
-    for (let i = 0; i < boxes.length; i++) {
-        boxes[i].classList.remove('addColor');
-        gridContainer.removeChild(boxes[i]);
+    if (squaresPerSide > 50) {
+        alert('Error, maximum value is 50');
     }
-    columnRepeat(squaresPerSide);
+    else if (squaresPerSide <= 0) {
+        alert('Error, please enter a positive value!');
+    }
+    else if (isNaN(squaresPerSide)) {
+        alert('Error, please enter a number value.')
+    }
+    else {
+        let boxes = document.querySelectorAll('.box');
+        for (let i = 0; i < boxes.length; i++) {
+            boxes[i].classList.remove('addColor');
+            gridContainer.removeChild(boxes[i]);
+        }
+        columnRepeat(squaresPerSide);
+    }
 }
 
 columnRepeat(16);
