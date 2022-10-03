@@ -28,4 +28,17 @@ function columnRepeat(squaresPerSide) {
     }
 }
 
+resetBtn.addEventListener('click', () => {
+    reset(prompt("How many squares per side?", "16"));
+})
+
+function reset(squaresPerSide) {
+    let boxes = document.querySelectorAll('.box');
+    for (let i = 0; i < boxes.length; i++) {
+        boxes[i].classList.remove('addColor');
+        gridContainer.removeChild(boxes[i]);
+    }
+    columnRepeat(squaresPerSide);
+}
+
 columnRepeat(16);
