@@ -18,6 +18,9 @@ function column(squaresPerSide) {
                 box.classList.add('addColor');
             }  
         })
+        box.addEventListener('click', () => {
+                box.classList.add('addColor');
+        })
     }
 }
 
