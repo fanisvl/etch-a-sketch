@@ -51,6 +51,7 @@ h1 {
     position: fixed;
     bottom: 0;
     margin: 1vh;
+    padding-top: 100px;
     width: 100%;
     display: flex;
     gap: 0.5vw;
