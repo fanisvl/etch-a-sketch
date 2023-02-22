@@ -29,18 +29,18 @@ h1 {
     gap: 1vw;
 }
 
-#sizeBtn {
+button {
     width: 130px;
     height: 30px;
     border-radius: 15px;
-    border: 0px;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid white;
+    color: white;
 }
 
-#clearBtn {
-    width: 130px;
-    height: 30px;
-    border-radius: 15px;
-    border: 0px;
+.eraseBtnActive {
+    background-color: white;
+    color: black;
 }
 
 .addColor {

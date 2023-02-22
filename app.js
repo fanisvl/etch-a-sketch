@@ -1,8 +1,10 @@
 let gridContainer = document.querySelector('#grid-container');
 let sizeBtn = document.querySelector('#sizeBtn');
 let clearBtn = document.querySelector('#clearBtn');
+let eraseBtn = document.querySelector('#eraseBtn');
+let eraseActive = false;
 
-let mouseDown = false
+let mouseDown = false;
 document.body.onmousedown = () => (mouseDown = true)
 document.body.onmouseup = () => (mouseDown = false)
 
@@ -14,12 +16,12 @@ function column(squaresPerSide) {
         box.style.height = "" + calcDimensions(squaresPerSide) + "";
         gridContainer.appendChild(box);
         box.addEventListener('mouseover', () => {
-            if (mouseDown == true) {
+            if (mouseDown == true && eraseActive == false) {
                 box.classList.add('addColor');
-            }  
-        })
-        box.addEventListener('click', () => {
-                box.classList.add('addColor');
+            }
+            else if(mouseDown == true) {
+                box.classList.remove('addColor');
+            }
         })
     }
 }
@@ -34,12 +36,16 @@ function columnRepeat(squaresPerSide) {
     gridContainer.style.cssText = 'grid-template-columns: repeat(' + squaresPerSide + "," + calcDimensions(squaresPerSide) + ")";
     for (let i = 1; i <= squaresPerSide; i++) {
         column(squaresPerSide);
-
     }
 }
 
+eraseBtn.addEventListener('click', () => {
+    eraseBtn.classList.toggle('eraseBtnActive');
+    eraseActive = !eraseActive;
+})
+
 sizeBtn.addEventListener('click', () => {
-    resize(prompt("How many squares per side?", "64"));
+    resize(prompt("How many squares per side? (1-100)", "64"));
 })
 
 function resize(squaresPerSide) {
