@@ -39,10 +39,10 @@ function columnRepeat(squaresPerSide) {
 }
 
 sizeBtn.addEventListener('click', () => {
-    reset(prompt("How many squares per side?", "64"));
+    resize(prompt("How many squares per side?", "64"));
 })
 
-function reset(squaresPerSide) {
+function resize(squaresPerSide) {
     if (squaresPerSide > 100) {
         alert('Error, maximum value is 100');
     }
