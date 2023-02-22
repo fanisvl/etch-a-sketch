@@ -1,5 +1,5 @@
 let gridContainer = document.querySelector('#grid-container');
-let resetBtn = document.querySelector('#resetBtn');
+let sizeBtn = document.querySelector('#sizeBtn');
 let clearBtn = document.querySelector('#clearBtn');
 
 let mouseDown = false
@@ -38,7 +38,7 @@ function columnRepeat(squaresPerSide) {
     }
 }
 
-resetBtn.addEventListener('click', () => {
+sizeBtn.addEventListener('click', () => {
     reset(prompt("How many squares per side?", "64"));
 })
 
